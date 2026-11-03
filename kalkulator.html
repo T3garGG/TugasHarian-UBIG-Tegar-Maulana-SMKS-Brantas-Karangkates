@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tegar Maulanaa | Kalkulator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .kalkulator-wrap {
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .kalkulator-kartu {
+      width: 100%;
+      max-width: 26rem;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .kalkulator-judul {
+      font-size: 1.75rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .kalkulator-desk {
+      color: #666666;
+      margin-bottom: 1.5rem;
+    }
+
+    
+    .kolom {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .kolom label {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: #1D3557;
+    }
+
+    .kolom input {
+      max-width: none;
+      width: 100%;
+      margin-top: 0;
+      padding: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    #hitung {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.9rem;
+      font-size: 1.1rem;
+      background-color: #E63946;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    #hitung:hover {
+      background-color: #c72e3b;
+    }
+
+    #hitung:active {
+      transform: scale(0.98);
+    }
+
+    .hasil {
+      margin-top: 1.25rem;
+      margin-bottom: 0;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #DDDDDD;
+      background-color: #F1FAEE;
+      font-family: "Poppins", Arial, sans-serif;
+      font-weight: 600;
+      color: #1D3557;
+      text-align: center;
+    }
+
+    .hasil:empty {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+        <h1>Tegar Maulana</h1>
+        <nav class="menu-laptop">
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="proyek.html">Proyek</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="kalkulator.html">Kalkulator</a></li>
+          </ul>
+        </nav>
+        <details class="menu-ponsel">
+          <summary>Menu</summary>
+          <nav>
+            <ul>
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="proyek.html">Proyek</a></li>
+              <li><a href="kontak.html">Kontak</a></li>
+              <li><a href="kalkulator.html">Kalkulator</a></li>
+            </ul>
+            <button type="button" id="mode" class="tombol-mode">Mode Gelap</button>
+          </nav>
+        </details>
+      </div>
+    </header>
+  </header>
+  <main>
+    <div class="container kalkulator-wrap">
+      <section class="kartu kalkulator-kartu">
+        <h2 class="kalkulator-judul">Kalkulator Nilai</h2>
+        <p class="kalkulator-desk">Masukkan nilai Tugas, UTS, dan UAS untuk menghitung rata-rata dan predikat.</p>
+
+        <div class="kolom">
+          <label for="tugas">Nilai Tugas</label>
+          <input type="number" id="tugas" placeholder="0 - 100" min="0" max="100">
+        </div>
+        <div class="kolom">
+          <label for="uts">Nilai UTS</label>
+          <input type="number" id="uts" placeholder="0 - 100" min="0" max="100">
+        </div>
+        <div class="kolom">
+          <label for="uas">Nilai UAS</label>
+          <input type="number" id="uas" placeholder="0 - 100" min="0" max="100">
+        </div>
+
+        <button id="hitung" type="button">Hitung</button>
+
+        <p id="hasil" class="hasil"></p>
+      </section>
+    </div>
+  </main>
+
+  <script src="Script/script.js" defer></script>
+  <script src="Script/kalkulator.js" defer></script>
+</body>
+</html>

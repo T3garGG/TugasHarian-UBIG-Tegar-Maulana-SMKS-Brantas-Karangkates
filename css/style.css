@@ -22,6 +22,9 @@ body {
   color: #333333;
   background-color: #F1FAEE;
 }
+body.gelap {
+  background-color: #1D3557;
+}
 
 h1, h2, h3 {
   font-family: "Poppins", Arial, sans-serif;
