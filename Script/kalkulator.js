@@ -1,3 +1,17 @@
+const hitungRataRata = (tugas, uts, uas) => (tugas + uts + uas) / 3;
+
+function predikat(nilai) {
+  if (nilai >= 90) {
+    return "A";
+  } else if (nilai >= 80) {
+    return "B";
+  } else if (nilai >= 70) {
+    return "C";
+  } else {
+    return "D";
+  }
+}
+
 const inputTugas = document.querySelector("#tugas");
 const inputUts = document.querySelector("#uts");
 const inputUas = document.querySelector("#uas");

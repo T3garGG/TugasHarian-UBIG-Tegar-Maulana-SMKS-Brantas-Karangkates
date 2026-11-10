@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
   <body>
     <header>
@@ -33,9 +34,9 @@
               <li><a href="kontak.html">Kontak</a></li>
               <li><a href="kalkulator.html">Kalkulator</a></li>
             </ul>
-            <button type="button" id="mode" class="tombol-mode">Mode Gelap</button>
           </nav>
         </details>
+        <button type="button" id="tombol-tema" class="tombol-tema">Mode Gelap</button>
       </div>
     </header>
 
@@ -44,7 +45,7 @@
         <section class="hero">
           <img
             src="img/foto-profil.png"
-            alt="Foto profil Andi Pratama"
+            alt="Foto profil Tegar Maulana"
             width="180"
           />
           <div>
@@ -59,9 +60,7 @@
         <section class="kartu">
           <h2>Tentang Saya</h2>
           <p>
-            Saya tinggal di Malang dan senang mencoba hal baru di dunia
-            teknologi. Saya ingin bisa membuat website yang bermanfaat untuk
-            sekolah dan UMKM di sekitar rumah.
+            Saya tinggal di Malang dan saya suka dengan teknologi apalagi tentang komputer,saya suka komputer,dan linux,dan juga saya suka tentang perlistrikan 
           </p>
         </section>
         <div class="daftar-kartu">
@@ -87,11 +86,8 @@
           </section>
           <section class="kartu">
             <h2>Keahlian</h2>
-            <ul>
-              <li>HTML dasar (sedang dipelajari)</li>
-              <li>Mengetik cepat</li>
-              <li>Desain poster dengan Canva</li>
-            </ul>
+            <ul id="daftar-skill"></ul>
+            <p id="jumlah-skill"></p>
           </section>
         </div>
 
@@ -138,7 +134,5 @@
       </p>
       <p>&copy; 2026 Tegar maulana. Dibuat di Kelas Industri UBIG.</p>
     </footer>
-    <script src="script.js" defer></script>
-    <script src="kalkulator.js" defer></script>
   </body>
 </html>
