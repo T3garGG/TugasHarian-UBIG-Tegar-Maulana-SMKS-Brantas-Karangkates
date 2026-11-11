@@ -5,17 +5,32 @@ const skills = [
 ];
 skills.push({ nama: "JavaScript", level: "Dasar" });
 
+// 1. Daftar keahlian (halaman Beranda), data dari data/keahlian.json
 const daftarSkill = document.querySelector("#daftar-skill");
 const jumlahSkill = document.querySelector("#jumlah-skill");
-
-if (daftarSkill) {
-  skills.forEach((skill) => {
-    const item = document.createElement("li");
-    item.textContent = `${skill.nama} (${skill.level})`;
-    daftarSkill.appendChild(item);
-  });
-  jumlahSkill.textContent = `Ada ${skills.length} keahlian yang sedang saya kembangkan.`;
+async function muatKeahlian() {
+  try {
+    const response = await fetch("data/keahlian.json");
+    if (!response.ok) {
+      throw new Error(`Status ${response.status}`);
+    }
+    const skills = await response.json();
+    skills.forEach((skill) => {
+      const item = document.createElement("li");
+      item.textContent = `${skill.nama} (${skill.level})`;
+      daftarSkill.appendChild(item);
+    });
+    jumlahSkill.textContent = `Ada ${skills.length} keahlian yang 
+sedang saya kembangkan.`;
+  } catch (error) {
+    jumlahSkill.textContent = "Daftar keahlian gagal dimuat.";
+    console.error(error);
+  }
 }
+if (daftarSkill) {
+  muatKeahlian();
+}
+
 
 const tombolTema = document.querySelector("#tombol-tema");
 tombolTema.addEventListener("click", () => {
@@ -67,22 +82,19 @@ const proyek = [
     kategori: "CSS",
     gambar: "img/css.png",
     alt: "Tangkapan layar portofolio di ponsel dan laptop",
-    deskripsi:
-      "Tampilan rapi di ponsel, tablet, dan laptop dengan Flexbox.",
+    deskripsi: "Tampilan rapi di ponsel, tablet, dan laptop dengan Flexbox.",
   },
   {
     judul: "Kalkulator Nilai Rapor",
     kategori: "JavaScript",
     gambar: "img/proyek-kalkulator.png",
     alt: "Tangkapan layar hasil kalkulator nilai di Console",
-    deskripsi:
-      "Rata-rata dan predikat nilai dengan fungsi JavaScript.",
+    deskripsi: "Rata-rata dan predikat nilai dengan fungsi JavaScript.",
   },
   {
     judul: "Lima Soal Logika",
     kategori: "JavaScript",
-    deskripsi:
-      "Lima fungsi logika yang masing-masing diuji tiga masukan.",
+    deskripsi: "Lima fungsi logika yang masing-masing diuji tiga masukan.",
   },
 ];
 
@@ -133,3 +145,41 @@ if (daftarProyek) {
   pasangFilter("#filter-css", "CSS");
   pasangFilter("#filter-javascript", "JavaScript");
 }
+const username = "T3garGG";
+const alamatRepo = `https://api.github.com/users/${username}/repos`;
+const pilihan = "?sort=updated&per_page=6";
+const daftarRepo = document.querySelector("#daftar-repo");
+const statusRepo = document.querySelector("#status-repo");
+
+async function ambilRepo() {
+  if (!daftarRepo) return;
+  
+  statusRepo.textContent = "Memuat...";
+
+  try {
+    const response = await fetch(alamatRepo + pilihan);
+    if (!response.ok) {
+      throw new Error(`Status ${response.status}`);
+    }
+
+    const repos = await response.json();
+    daftarRepo.innerHTML = ""; 
+
+    repos.forEach((repo) => {
+      const item = document.createElement("li");
+      const tautan = document.createElement("a");
+      tautan.href = repo.html_url;
+      tautan.target = "_blank";
+      tautan.textContent = repo.name;
+      item.appendChild(tautan);
+      daftarRepo.appendChild(item);
+    });
+
+    statusRepo.textContent = `${repos.length} repositori yang terakhir diperbarui:`;
+  } catch (error) {
+    statusRepo.textContent = "Maaf, daftar repositori gagal dimuat. Periksa username atau coba lagi nanti.";
+    console.error(error);
+  }
+}
+
+ambilRepo();

@@ -1,29 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tegar Maulana | Proyek</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
-</head>
-<body>
-  <header>
-    <div class="container navbar">
-      <h1>Tegar Maulana</h1>
-      <nav class="menu-laptop">
-        <ul>
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="proyek.html">Proyek</a></li>
-          <li><a href="kontak.html">Kontak</a></li>
-          <li><a href="kalkulator.html">Kalkulator</a></li>
-        </ul>
-      </nav>
-      <details class="menu-ponsel">        
-        <summary>Menu</summary>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tegar Maulana | Proyek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container navbar">
+        <h1>Tegar Maulana</h1>
+        <nav class="menu-laptop">
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="proyek.html">Proyek</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="kalkulator.html">Kalkulator</a></li>
+          </ul>
+        </nav>
+        <details class="menu-ponsel">
+          <summary>Menu</summary>
           <nav>
             <ul>
               <li><a href="index.html">Beranda</a></li>
@@ -32,46 +35,82 @@
               <li><a href="kalkulator.html">Kalkulator</a></li>
             </ul>
           </nav>
-      </details>
-      <button type="button" id="tombol-tema" class="tombol-tema">Mode Gelap</button>
-    </div>
-  </header>
-
-  <main>
-    <div class="container">
-      <section>
-        <h2>Proyek Saya</h2>
-        <p>Kumpulan hasil belajar saya di Kelas Industri UBIG.</p>
-
-        <div class="filter">
-          <button type="button" class="tombol-filter aktif" id="filter-semua">Semua</button>
-          <button type="button" class="tombol-filter" id="filter-html">HTML</button>
-          <button type="button" class="tombol-filter" id="filter-css">CSS</button>
-          <button type="button" class="tombol-filter" id="filter-javascript">JavaScript</button>
-        </div>
-        <p id="jumlah-proyek"></p>
-
-        <div class="daftar-kartu" id="daftar-proyek"></div>
-      </section>
-
-      <section class="kartu">
-        <h2>Pertanyaan yang Sering Diajukan</h2>
-        <details>
-          <summary>Bahasa apa yang dipakai untuk membuat proyek ini?</summary>
-          <p>Proyek di halaman ini dibuat dengan HTML, CSS, dan JavaScript. Pilih tombol kategori di atas untuk melihat proyek per bahasa.</p>
         </details>
-        <details>
-          <summary>Apakah saya menerima pesanan pembuatan website?</summary>
-          <p>Belum, saya masih belajar. Namun kamu tetap boleh menghubungi saya melalui halaman Kontak.</p>
-        </details>
-      </section>
-    </div>
-  </main>
-  <footer>
-    <p>Kontak: <a href="mailto:tegarxpplg1@gmail.com">tegarxpplg1@gmail.com</a> |
-      <a href="https://github.com/T3garGG" target="_blank">GitHub</a> |
-      <a href="https://youtube.com/@thisgarr" target="_blank">YouTube</a></p>
-    <p>&copy; 2026 Tegar Maulana. Dibuat di Kelas Industri UBIG.</p>
-  </footer>
-</body>
+        <button type="button" id="tombol-tema" class="tombol-tema">
+          Mode Gelap
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section>
+          <h2>Proyek Saya</h2>
+          <p>Kumpulan hasil belajar saya di Kelas Industri UBIG.</p>
+
+          <div class="filter">
+            <button type="button" class="tombol-filter aktif" id="filter-semua">
+              Semua
+            </button>
+            <button type="button" class="tombol-filter" id="filter-html">
+              HTML
+            </button>
+            <button type="button" class="tombol-filter" id="filter-css">
+              CSS
+            </button>
+            <button type="button" class="tombol-filter" id="filter-javascript">
+              JavaScript
+            </button>
+          </div>
+          <p id="jumlah-proyek"></p>
+
+          <div class="daftar-kartu" id="daftar-proyek"></div>
+        </section>
+
+        <section class="kartu">
+          <h2>Repositori GitHub Saya</h2>
+          <p>
+            Daftar ini diambil langsung dari GitHub setiap kali halaman dibuka.
+          </p>
+          <p id="status-repo"></p>
+          <ul id="daftar-repo"></ul>
+        </section>
+        <section class="kartu">
+          <h2>Repositori GitHub Saya</h2>
+          <p>
+            Daftar ini diambil langsung dari GitHub setiap kali halaman dibuka.
+          </p>
+          <p id="status-repo"></p>
+          <ul id="daftar-repo"></ul>
+        </section>
+
+        <section class="kartu">
+          <h2>Pertanyaan yang Sering Diajukan</h2>
+          <details>
+            <summary>Bahasa apa yang dipakai untuk membuat proyek ini?</summary>
+            <p>
+              Proyek di halaman ini dibuat dengan HTML, CSS, dan JavaScript.
+              Pilih tombol kategori di atas untuk melihat proyek per bahasa.
+            </p>
+          </details>
+          <details>
+            <summary>Apakah saya menerima pesanan pembuatan website?</summary>
+            <p>
+              Belum, saya masih belajar. Namun kamu tetap boleh menghubungi saya
+              melalui halaman Kontak.
+            </p>
+          </details>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Kontak:
+        <a href="mailto:tegarxpplg1@gmail.com">tegarxpplg1@gmail.com</a> |
+        <a href="https://github.com/T3garGG" target="_blank">GitHub</a> |
+        <a href="https://youtube.com/@thisgarr" target="_blank">YouTube</a>
+      </p>
+      <p>&copy; 2026 Tegar Maulana. Dibuat di Kelas Industri UBIG.</p>
+    </footer>
+  </body>
 </html>
