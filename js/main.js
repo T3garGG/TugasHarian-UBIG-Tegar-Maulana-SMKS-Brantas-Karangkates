@@ -55,7 +55,7 @@ const proyek = [
   {
     judul: "Halaman Profil Pertama",
     kategori: "HTML",
-    gambar: "img/proyek-profil.png",
+    gambar: "img/proyek-profil.webp",
     alt: "Tangkapan layar halaman profil Tegar Maulana",
     deskripsi:
       "Halaman web pertama saya, dibuat dengan HTML dasar di Minggu 01.",
@@ -63,7 +63,7 @@ const proyek = [
   {
     judul: "Form Kontak",
     kategori: "HTML",
-    gambar: "img/proyek-kontak.png",
+    gambar: "img/proyek-kontak.webp",
     alt: "Tangkapan layar form kontak berisi lima isian",
     deskripsi:
       "Form untuk menghubungi saya. Setiap isian memiliki label dan wajib diisi.",
@@ -71,7 +71,7 @@ const proyek = [
   {
     judul: "Tabel Jadwal Belajar",
     kategori: "HTML",
-    gambar: "img/proyek-jadwal.png",
+    gambar: "img/proyek-jadwal.webp",
     alt: "Tangkapan layar tabel jadwal belajar mandiri",
     deskripsi:
       "Tabel berisi jadwal belajar mandiri saya, disusun dengan thead dan tbody.",
@@ -79,14 +79,14 @@ const proyek = [
   {
     judul: "Portofolio Responsif",
     kategori: "CSS",
-    gambar: "img/css.png",
+    gambar: "img/css.webp",
     alt: "Tangkapan layar portofolio di ponsel dan laptop",
     deskripsi: "Tampilan rapi di ponsel, tablet, dan laptop dengan Flexbox.",
   },
   {
     judul: "Kalkulator Nilai Rapor",
     kategori: "JavaScript",
-    gambar: "img/proyek-kalkulator.png",
+    gambar: "img/proyek-kalkulator.webp",
     alt: "Tangkapan layar hasil kalkulator nilai di Console",
     deskripsi: "Rata-rata dan predikat nilai dengan fungsi JavaScript.",
   },
