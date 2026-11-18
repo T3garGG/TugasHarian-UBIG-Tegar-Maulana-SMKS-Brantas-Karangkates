@@ -31,7 +31,6 @@ if (daftarSkill) {
   muatKeahlian();
 }
 
-
 const tombolTema = document.querySelector("#tombol-tema");
 tombolTema.addEventListener("click", () => {
   document.body.classList.toggle("gelap");
@@ -145,7 +144,9 @@ if (daftarProyek) {
   pasangFilter("#filter-css", "CSS");
   pasangFilter("#filter-javascript", "JavaScript");
 }
+
 const username = "T3garGG";
+
 const alamatRepo = `https://api.github.com/users/${username}/repos`;
 const pilihan = "?sort=updated&per_page=6";
 const daftarRepo = document.querySelector("#daftar-repo");
@@ -153,7 +154,7 @@ const statusRepo = document.querySelector("#status-repo");
 
 async function ambilRepo() {
   if (!daftarRepo) return;
-  
+
   statusRepo.textContent = "Memuat...";
 
   try {
@@ -163,7 +164,7 @@ async function ambilRepo() {
     }
 
     const repos = await response.json();
-    daftarRepo.innerHTML = ""; 
+    daftarRepo.innerHTML = "";
 
     repos.forEach((repo) => {
       const item = document.createElement("li");
@@ -177,7 +178,8 @@ async function ambilRepo() {
 
     statusRepo.textContent = `${repos.length} repositori yang terakhir diperbarui:`;
   } catch (error) {
-    statusRepo.textContent = "Maaf, daftar repositori gagal dimuat. Periksa username atau coba lagi nanti.";
+    statusRepo.textContent =
+      "Maaf, daftar repositori gagal dimuat. Periksa username atau coba lagi nanti.";
     console.error(error);
   }
 }
