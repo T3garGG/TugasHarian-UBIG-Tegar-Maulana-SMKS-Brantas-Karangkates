@@ -93,15 +93,23 @@
             <h2>Keahlian</h2>
             <ul id="daftar-skill"></ul>
             <p id="jumlah-skill"></p>
-            <div class="tambah-skill">
-              <h4>Keahlian Baru</h4>
-              <ul id="skill-baru">
-                <p id="pesan-skill"></p>
-              </ul>
-              <h4>Level</h4>
-              <p>Mahir</p>
-              <button type="button" id="level" aria-label="Keahlian">Tambah Keahlian</button>
-            </div>
+            
+            <form id="form-tambah-skill" style="margin-top: 15px;">
+              <h4>Tambah Keahlian Baru</h4>
+              <p>
+                <label for="input-skill-nama">Nama Keahlian</label><br>
+                <input type="text" id="input-skill-nama" placeholder="Contoh: React.js" required style="margin-bottom: 10px;">
+              </p>
+              <p>
+                <label for="input-skill-level">Level Keahlian</label><br>
+                <select id="input-skill-level" style="margin-bottom: 10px;">
+                  <option value="Dasar">Dasar</option>
+                  <option value="Menengah">Menengah</option>
+                  <option value="Mahir">Mahir</option>
+                </select>
+              </p>
+              <button type="submit" class="tombol">Tambah Keahlian</button>
+            </form>
           </section>
         </div>
 

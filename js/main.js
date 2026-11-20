@@ -185,3 +185,27 @@ async function ambilRepo() {
 }
 
 ambilRepo();
+
+const formTambahSkill = document.querySelector("#form-tambah-skill");
+const inputSkillNama = document.querySelector("#input-skill-nama");
+const inputSkillLevel = document.querySelector("#input-skill-level");
+
+if (formTambahSkill) {
+  formTambahSkill.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const namaBaru = inputSkillNama.value.trim();
+    const levelBaru = inputSkillLevel.value;
+
+    if (namaBaru) {
+      const item = document.createElement("li");
+      item.textContent = `${namaBaru} (${levelBaru})`;
+      daftarSkill.appendChild(item);
+
+      // Update jumlah skill text if needed
+      // Optional: count current items in daftarSkill or increment
+      
+      inputSkillNama.value = "";
+      inputSkillLevel.value = "Dasar";
+    }
+  });
+}
